@@ -64,7 +64,7 @@ export const AppRouter = () => {
                         component={ NotFoundScreen }
                     />
                     <Redirect
-                        to="/404"
+                        to="/"
                     />
                     
                 </Switch>
