@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vision5app/static/css/main.316e14e7.chunk.css",
-    "main.js": "/vision5app/static/js/main.62bcfcd9.chunk.js",
-    "main.js.map": "/vision5app/static/js/main.62bcfcd9.chunk.js.map",
+    "main.js": "/vision5app/static/js/main.05d98125.chunk.js",
+    "main.js.map": "/vision5app/static/js/main.05d98125.chunk.js.map",
     "runtime-main.js": "/vision5app/static/js/runtime-main.493d811e.js",
     "runtime-main.js.map": "/vision5app/static/js/runtime-main.493d811e.js.map",
     "static/css/2.ed1298f3.chunk.css": "/vision5app/static/css/2.ed1298f3.chunk.css",
@@ -35,6 +35,6 @@
     "static/css/2.ed1298f3.chunk.css",
     "static/js/2.2681556b.chunk.js",
     "static/css/main.316e14e7.chunk.css",
-    "static/js/main.62bcfcd9.chunk.js"
+    "static/js/main.05d98125.chunk.js"
   ]
 }
