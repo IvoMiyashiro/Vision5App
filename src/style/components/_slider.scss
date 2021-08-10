@@ -1,0 +1,79 @@
+.slider__main {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider__container {
+    position: relative;
+
+    @include pc {
+        &:hover {
+            .slider__leftBtn,
+            .slider__rightBtn {
+                display: block;
+            }
+        }
+    }
+}
+
+.slider__show {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.slider__slide {
+    min-width: 100%;
+    overflow: hidden;
+    transition: .3s ease all;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__slideRev {
+    min-width: 100%;
+    overflow: hidden;
+    transition: .3s ease all;
+    max-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__slideBtnLink {
+    text-decoration: none;
+}
+
+.slider__controls {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.slider__leftBtn,
+.slider__rightBtn {
+    display: none;
+    pointer-events: all;
+    outline: none;
+    font-size: 2rem;
+    height: 100%;
+    position: absolute;
+    transition: .3s ease all;
+    padding: 0 .5em;
+    color: $dark-primary;
+}
+
+.slider__rightBtn{
+    right: 0;
+}
+
+.slider__leftBtn {
+    left: 0;
+}

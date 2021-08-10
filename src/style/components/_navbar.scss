@@ -1,0 +1,217 @@
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -2px;
+    background-color: $white;
+    z-index: 5;
+}
+
+.topbar {
+    background: $primary;
+    width: 100%;
+    height: 18px;
+
+    &
+
+    &__iconsSection {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: .75em;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__link {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    width: 100%;
+    max-width: 1440px;
+    padding: .5em 0em;
+    z-index: 5;
+
+    &__section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__mobileMenuSection {
+
+        @include pc {
+            display: none;
+        }
+    }
+
+    &__logo {
+        width: 200px;
+    }
+
+    &__barsIcon {
+        color: $primary;
+        font-size: 1.5rem;
+    }
+
+    &__linksSection {
+        display: none;
+
+        @include pc {
+            display: block;
+        }
+    }
+
+    &__links {
+        display: flex;
+        position: relative;
+        list-style: none;
+        gap: 2em;
+    }
+
+    &__link {
+        font-family: 'Poppins';
+        font-weight: 600;
+        color: $primary;
+        cursor: pointer;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            color: $dark-primary;
+            transition: .2s ease-in-out;
+
+            .navbar__linkMenu {
+                display: block;
+                z-index: 5;
+            }
+        }
+
+
+    }
+
+    &__active {
+        border-bottom: 2px solid $secondary;
+    }
+
+    &__linkMenu {
+        display: none;
+        position: absolute;
+        padding-top: 1.8em;
+        min-width: 125px;
+    }
+
+    &__menuLinks {
+        background: $dark-primary;
+        list-style: none;
+        border-radius: 4px;
+        margin: 0;
+        padding: .25em 0;
+    }
+
+    &__menuLink {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: .85rem;
+        color: $white;
+        padding: .75em 1.5em;
+    }
+}
+
+.modalBackground {
+    position: fixed;
+    top: 0;
+    background-color: $modal;
+    height: 100vh;
+    overflow: hidden;
+    width: 0;
+    z-index: 5;
+    transition: .1s ease-in-out all;
+
+    @include pc {
+        display: none;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 0;
+    max-width: 350px;
+    height: 100vh;
+    z-index: 5;
+    transition: .2s ease-in-out all;
+
+    @include pc {
+        display: none;
+    }
+
+    &__links {
+        height: 100%;
+        background-color: $white;
+        z-index: 10;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 1rem;
+        color: $dark-primary;
+        border-bottom: 1px solid $dark-grey;
+        cursor: pointer;
+        padding: .5em;
+
+        span {
+            font-family: 'Poppins';
+            font-weight: 600;
+            margin-left: .5em;
+        }
+    }
+
+    &__span {
+        margin-left: .3em !important;
+    }
+
+    &__linkScroll {
+        font-family: 'Poppins';
+        color: $dark-primary;
+    }
+
+    &__iconContainer {
+        margin-right: .75em;
+        transition: .2s ease-in-out all;
+    }
+
+    &__linkIcon {
+        color: $dark-primary;
+        font-size: .85rem;
+    }
+
+    &__linkMenu {
+        list-style: none;
+        background-color: $dark-primary;
+        overflow: hidden;
+        height: 0px;
+        transition: .2s ease-in-out all;
+    }
+
+    &__menuLink {
+        font-family: 'Poppins';
+        font-size: .95rem;
+        color: $white;
+        font-weight: 400;
+        padding: .75em 1.5em;
+        margin-left: .75em;
+        text-decoration: none;
+    }
+}

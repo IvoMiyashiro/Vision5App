@@ -1,0 +1,67 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    color: $white;
+    margin-top: 7em;
+    padding: 2em 0;
+
+    &__linksList {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+        list-style: none; 
+    }
+
+    &__link {
+        font-family: 'Poppins';
+        font-weight: 600;
+        border-right: 2px solid $secondary;
+        padding-right: 1em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__lastLink {
+        border: none;
+        padding: 0;
+    }
+
+    &__logoSection {
+        margin: 1.75em 0;
+        text-align: center;
+    }
+
+    &__logo {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    &__logoText {
+        margin-top: .75em;
+        font-size: .85rem;
+    }
+
+    &__logoSpan {
+        display: block;
+    }
+
+    &__logoLink {
+        color: $white;
+        margin: 0 .5em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__iconsSection {
+        display: flex;
+        gap: 1em;
+    }
+}

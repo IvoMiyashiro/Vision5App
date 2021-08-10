@@ -1,0 +1,60 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+ -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.altContainer {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+
+.btnPrimary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    background-color: $secondary;
+    color: $white;
+    border-radius: 4px;
+    width: 125px;
+    height: 30px;
+
+    &:disabled {
+        opacity: .7;
+    }
+}
+
+.link {
+    text-decoration: none;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.mt {
+    margin-top: 2em;
+
+    &__2 {
+        margin-top: 2em;
+    }
+}

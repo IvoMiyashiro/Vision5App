@@ -1,0 +1,347 @@
+.home {
+
+    &__goTopBtn {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        background: $white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        z-index: 5;
+        box-shadow:
+        0 0px 0.4px rgba(0, 0, 0, 0.028),
+        0 0px 1px rgba(0, 0, 0, 0.04),
+        0 0px 1.9px rgba(0, 0, 0, 0.05),
+        0 0px 3.4px rgba(0, 0, 0, 0.06),
+        0 0px 6.3px rgba(0, 0, 0, 0.072),
+        0 0px 15px rgba(0, 0, 0, 0.1)
+      ;
+    }
+}
+
+.about {
+    display: grid;
+    justify-items: center;
+    gap: 3em;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 6em;
+
+    @include pc {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include tablet {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 1.25rem;
+        color: $primary;
+        max-width: 350px;
+
+        @include pc {
+            font-size: 1.5rem;
+        }
+
+        span {
+            display: block;
+            font-family: 'Poppins';
+            font-size: .85rem;
+            color: $secondary;
+        }
+    }
+
+    &__text {
+        color: $dark-primary;
+        text-align: center;
+        font-weight: 300;
+        max-width: 600px;
+        line-height: 1.5em;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    &__listSection {
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__listItem {
+        display: flex;
+
+        p {
+            font-size: .95rem;
+            margin-left: .4em;
+        }
+    }
+
+    &_listIcon {
+        color: $green;
+        font-size: .65rem;
+        margin-top: .4em;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        font-size: .85rem;
+        margin-top: 2em;
+        width: 175px;
+        height: 35px;
+    }
+
+    &__btnIcon {
+        margin-left: .65em;
+        font-size: .65rem;
+    }
+}
+
+.services {
+    display: grid;
+    grid-template-rows: (300px, 1fr);
+    justify-items: center;
+    margin-top: 6em;
+
+    &__title {
+        font-family: 'Poppins';
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: center;
+        color: $primary;
+        max-width: 450px;
+
+        @include pc {
+            font-size: 1.5rem;
+        }
+
+        span {
+            display: block;
+            font-family: 'Poppins';
+            font-size: .85rem;
+            color: $secondary
+        }
+    }
+
+    &__cardsSection {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+        margin: 3em 0;
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        font-size: .95rem;
+        color: $secondary;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    margin-top: 6em;
+
+    &__title {
+        font-family: 'Poppins';
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: center;
+        color: $primary;
+        max-width: 450px;
+
+        @include pc {
+            font-size: 1.5rem;
+        }
+
+        span {
+            display: block;
+            font-family: 'Poppins';
+            font-size: .85rem;
+            color: $secondary
+        }
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5em;
+        flex-wrap: wrap;
+
+        @include pc {
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 1em;
+            width: 100%;
+        }
+    }
+
+    &__formSection {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        box-shadow:
+        0 0px 0.2px rgba(0, 0, 0, 0.017),
+        0 0px 0.4px rgba(0, 0, 0, 0.024),
+        0 0px 0.8px rgba(0, 0, 0, 0.03),
+        0 0px 1.3px rgba(0, 0, 0, 0.036),
+        0 0px 2.5px rgba(0, 0, 0, 0.043),
+        0 0px 6px rgba(0, 0, 0, 0.06)
+        ;
+
+        @include pc {
+            flex-direction: row;
+            min-width: 575px;
+            max-width: 575px;
+        }
+    }
+}
+
+.brands {
+    display: flex;
+    flex-direction: column;
+
+    &__brandsSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+
+    &__logo {
+        width: 80px;
+    }
+
+    &__text {
+        font-family: 'Poppins';
+        margin: .75em;
+        text-align: center;
+
+        span {
+            font-family: 'Poppins';
+            font-weight: 600;
+            color: $primary;
+        }
+    }
+}
+
+.blogSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6em;
+
+    &__title {
+        font-family: 'Poppins';
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: center;
+        color: $primary;
+        max-width: 450px;
+        margin: 0 auto;
+
+        @include pc {
+            font-size: 1.5rem;
+        }
+
+        span {
+            display: block;
+            font-family: 'Poppins';
+            font-size: .85rem;
+            color: $secondary
+        }
+    }
+
+    &__posts {
+        display: flex;
+        justify-content: center;
+        gap: 4em;
+        flex-wrap: wrap;
+        margin-top: 3em;
+    }
+
+    &__btn {
+        align-self: center;
+        margin-top: 2em;
+    }
+}
+
+.blogSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6em;
+
+    &__title {
+        font-family: 'Poppins';
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: center;
+        color: $primary;
+        max-width: 450px;
+        margin: 0 auto;
+
+        @include pc {
+            font-size: 1.5rem;
+        }
+
+        span {
+            display: block;
+            font-family: 'Poppins';
+            font-size: .85rem;
+            color: $secondary
+        }
+    }
+
+    &__posts {
+        display: flex;
+        justify-content: center;
+        gap: 4em;
+        flex-wrap: wrap;
+        margin-top: 3em;
+    }
+
+    &__btn {
+        align-self: center;
+        margin-top: 2em;
+    }
+}
+
+.titleSection {
+    opacity: 0;
+    transform: translateY( 20px );
+    transition: .8s ease-in-out;
+}
+
+.scrollEffect {
+    opacity: 1;
+    transform: translateY( 0px );
+}

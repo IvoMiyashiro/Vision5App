@@ -1,0 +1,321 @@
+.largeCard {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: $white;
+    margin: 1em 0;
+    padding: .5em;
+    width: 100%;
+    max-width: 850px;
+    z-index: 5;
+    box-shadow:
+    0 0px 0.3px rgba(0, 0, 0, 0.009),
+    0 0px 0.9px rgba(0, 0, 0, 0.013),
+    0 0px 1.8px rgba(0, 0, 0, 0.017),
+    0 0px 3.7px rgba(0, 0, 0, 0.021),
+    0 0px 10px rgba(0, 0, 0, 0.03)
+    ;
+
+    @include pc {
+        height: 200px;
+    }
+
+    @include tablet {
+        grid-template-rows: repeat(1, 1fr) ;
+        grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    }
+
+    &__section {
+        color: $dark-primary;
+        padding: 1em;
+        margin: 0 auto;
+
+        @include tablet {
+            border: none;
+            padding: 1em;
+            width: 100%;
+        }
+
+        @include pc {
+            border: none;
+            padding: 1em;
+            max-width: 275px;
+        }
+
+    }
+
+    &__title {
+        font-size: 1.25rem;
+    }
+
+    &__titleLink {
+        color: $dark-primary;
+    }
+
+    &__text {
+        font-size: .85rem;
+        margin: .75em 0;
+    }
+
+    &__icon {
+        color: $secondary;
+    }
+}
+
+.smallCard {
+    display: flex;
+    align-items: center;
+    background-color: $primary;
+    height: 200px;
+    z-index: 5;
+
+    @include tablet {
+        width: 100%;
+        max-width: 850px;
+    }
+
+    @include pc {
+        width: 300px;
+    }
+
+    &__section {    
+        color: $white;
+        padding: 2em;
+    }
+
+    &__text {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: .85rem;
+        margin: .85em 0;
+    }
+
+    &__icon {
+        color: $white;
+        font-size: .6rem;
+        margin-left: .75em;
+    }
+}
+
+.hoverCard {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    border-radius: 3px;
+    padding: 1.5em 1em;
+    max-width: 350px;
+    height: 300px;
+    box-shadow:
+    0 0px 0.2px rgba(0, 0, 0, 0.017),
+    0 0px 0.4px rgba(0, 0, 0, 0.024),
+    0 0px 0.8px rgba(0, 0, 0, 0.03),
+    0 0px 1.3px rgba(0, 0, 0, 0.036),
+    0 0px 2.5px rgba(0, 0, 0, 0.043),
+    0 0px 6px rgba(0, 0, 0, 0.06)
+    ;
+    transition: .2s ease-in-out all;
+
+    &:hover {
+        transition: .2s ease-in-out all;
+
+        .hoverCard__icon {
+            color: $white;
+        }
+    
+        .hoverCard__mainText {
+            color: $white;
+        }
+
+        .hoverCard__btn {
+            color: $white;
+        }
+    }
+
+    &__icon {
+        font-size: 2.75rem;
+        color: $secondary;
+    }
+
+    &__mainText {
+        color: $dark-primary;
+    }
+
+    &__text {
+        margin-top: .85em;
+    }
+
+    &__btn {
+        font-family: 'Poppins';
+        font-size: .85rem;
+        font-weight: 600;
+        color: $dark-primary;
+    }
+
+    &__btnIcon {
+        margin-left: .5em;
+        font-size: .6rem;
+    }
+}
+
+.firstCardImg {
+
+    &:hover {
+        background-image: 
+            linear-gradient(rgba(5, 51, 163, 0.8), rgba(5, 51, 163, 0.8)),
+            url(../../assets/images/hoverCards/1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.secondCardImg {
+
+    &:hover {
+        background-image: 
+            linear-gradient(rgba(5, 51, 163, 0.8), rgba(5, 51, 163, 0.8)),
+            url(../../assets/images/hoverCards/2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.thirdCardImg {
+
+    &:hover {
+        background-image: 
+            linear-gradient(rgba(5, 51, 163, 0.8), rgba(5, 51, 163, 0.8)),
+            url(../../assets/images/hoverCards/3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.fourthCardImg {
+
+    &:hover {
+        background-image: 
+            linear-gradient(rgba(5, 51, 163, 0.8), rgba(5, 51, 163, 0.8)),
+            url(../../assets/images/hoverCards/4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.fifthCardImg {
+
+    &:hover {
+        background-image: 
+            linear-gradient(rgba(5, 51, 163, 0.8), rgba(5, 51, 163, 0.8)),
+            url(../../assets/images/hoverCards/5.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.sixthCardImg {
+
+    &:hover {
+        background-image: 
+            linear-gradient(rgba(5, 51, 163, 0.8), rgba(5, 51, 163, 0.8)),
+            url(../../assets/images/hoverCards/6.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.reviewCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $dark-primary;
+
+    &__starSection {
+        display: flex;
+        gap: .15em;
+    }
+
+    &__icon {
+        color: $yellow;
+    }
+
+    &__review {
+        font-size: .85rem;
+        font-weight: 600;
+        text-align: center;
+        margin: .75em 0;
+        max-width: 800px;
+
+        @include pc {
+            font-size: 1.15rem;
+        }
+    }
+
+    &__name {
+        font-family: 'Poppins';
+        font-size: .75rem;
+        font-weight: 400;
+
+        @include pc {
+            font-size: .85rem;
+        }
+    }
+}
+
+.blogCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    color: $primary;
+    width: 275px;
+    height: 450px;
+    box-shadow:
+    0 0px 0.2px rgba(0, 0, 0, 0.017),
+    0 0px 0.4px rgba(0, 0, 0, 0.024),
+    0 0px 0.8px rgba(0, 0, 0, 0.03),
+    0 0px 1.3px rgba(0, 0, 0, 0.036),
+    0 0px 2.5px rgba(0, 0, 0, 0.043),
+    0 0px 6px rgba(0, 0, 0, 0.06)
+    ;
+    transition: .2s ease-in-out;
+
+    &:hover {
+    transition: .2s ease-in-out;
+        box-shadow:
+        0 0px 0.6px rgba(0, 0, 0, 0.017),
+        0 0px 1.3px rgba(0, 0, 0, 0.024),
+        0 0px 2.5px rgba(0, 0, 0, 0.03),
+        0 0px 4.5px rgba(0, 0, 0, 0.036),
+        0 0px 8.4px rgba(0, 0, 0, 0.043),
+        0 0px 20px rgba(0, 0, 0, 0.06)
+        ;
+    }
+
+     
+    &__img {
+        width: 275px;
+        border-radius: 4px 4px 0px 0;
+    }
+
+    &__section {
+        padding: .5em;
+    }
+
+    &__date {
+        font-size: .85rem;
+        color: $secondary;
+    }
+
+    &__title {
+        font-family: 'Poppins';
+        font-size: 1.15rem;
+        margin: .5em 0;
+    }
+
+
+}
