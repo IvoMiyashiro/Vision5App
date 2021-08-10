@@ -45,6 +45,11 @@ export const AppRouter = () => {
                         path="/services" 
                         component={ ServicesRoutes } 
                     />
+                    <Route 
+                        exact
+                        path="/contact"
+                        component={ BuildingScreen }
+                    />
                     <Route  
                         path="/blog" 
                         component={ BlogRoutes } 

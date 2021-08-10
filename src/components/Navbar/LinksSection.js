@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as LinkS } from 'react-scroll';
+
 import { Link } from 'react-router-dom';
 
 import { LinkMenu } from './LinkMenu';
@@ -8,21 +8,13 @@ export const LinksSection = () => {
     return (
         <div className="navbar__linksSection">
             <ul className="navbar__links">
-                <LinkS to="home" smooth={ true } offset={ -90 } activeClass="navbar__active">
-                    <Link to="/" className="link">
-                        <li className="navbar__link"> 
-                            Inicio 
-                        </li>
-                    </Link>
-                </LinkS>
-                <LinkS to="about" smooth={ true } offset={ -80 } activeClass="navbar__active">
                     <li className="navbar__link"> 
-                        Nosotros
+                        <Link to="/" className="link"> Inicio </Link>
+                    </li>
+                    <li className="navbar__link"> 
+                    <Link to="/about" className="link"> Nosotros </Link>
                         <LinkMenu 
                             data={[{
-                                title: 'Nosotros',
-                                link: '/about'  
-                            },{
                                 title: 'Boletín Informativo',
                                 link: '/about/newsletter',
                             },{
@@ -31,15 +23,11 @@ export const LinksSection = () => {
                             }]}
                         />
                     </li>
-                </LinkS>
-                <LinkS to="services" smooth={ true } offset={ -80 } activeClass="navbar__active">
+                
                     <li className="navbar__link"> 
-                        Servicios 
+                        <Link to="/services" className="link"> Servicios </Link>
                         <LinkMenu 
                             data={[{
-                                title: 'Servicios',
-                                link: '/services',
-                            },{
                                 title: 'Productos',
                                 link: '/services/products',
                             },{
@@ -51,27 +39,14 @@ export const LinksSection = () => {
                             }]}
                         />
                     </li>
-                </LinkS>
-                <LinkS to="contact" smooth={ true } offset={ -80 } activeClass="navbar__active">
-                    <Link to="/" className="link">
-                        <li className="navbar__link"> 
-                            Contacto 
-                        </li>
-                    </Link>
-                </LinkS>
-                <LinkS to="blog" smooth={ true } offset={ -80 } activeClass="navbar__active">
-                    <Link to="/" className="link">
-                        <li className="navbar__link"> 
-                            Blog
-                            <LinkMenu 
-                                data={[{
-                                    title: 'Visitar Blog',
-                                    link: '/blog',
-                                }]}
-                            />
-                        </li>
-                    </Link>
-                </LinkS>
+                
+                    <li className="navbar__link"> 
+                        <Link to="/contact" className="link"> Contacto </Link>
+                    </li>
+                
+                    <li className="navbar__link"> 
+                        <Link to="/blog" className="link"> Blog </Link>
+                    </li>
             </ul>
         </div>
     )

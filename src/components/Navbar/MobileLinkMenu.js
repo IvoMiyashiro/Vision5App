@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook, faBlog, faChevronRight, faHome, faServer, faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -37,18 +36,18 @@ export const MobileMenu = () => {
     return (
         <ul className="mobileMenu__links">
             <li className="mobileMenu__link">
-                <LinkS to="home" smooth={ true } offset={ -90 } >
-                    <div>
-                        <FontAwesomeIcon icon={ faHome } className="mobileMenu__linkIcon" />
-                        <span> Inicio </span>
-                    </div>
-                </LinkS>
+                    <Link to="/" className="link">
+                        <div>
+                            <FontAwesomeIcon icon={ faHome } className="mobileMenu__linkIcon" />
+                            <span> Inicio </span>
+                        </div>
+                    </Link>
             </li>
             <li className="mobileMenu__link" onClick={ handleAboutMenu }>
-                <LinkS to="about" smooth={ true } offset={ -90 } className="mobileMenu__linkScroll">
+                <Link to="/about" className="link">
                     <FontAwesomeIcon icon={ faUsers } className="mobileMenu__linkIcon" />
                     <span className="mobileMenu__span"> Nosotros </span>
-                </LinkS>
+                </Link>
                 <div className="mobileMenu__iconContainer" ref={ aboutLinkIcon }>
                     <FontAwesomeIcon 
                         icon={ faChevronRight } 
@@ -68,10 +67,10 @@ export const MobileMenu = () => {
                 </Link>
             </ul>
             <li className="mobileMenu__link" onClick={ handleServicesMenu }>
-                <LinkS to="services" smooth={ true } offset={ -90 } className="mobileMenu__linkScroll">
+                <Link to="/services" className="link">
                     <FontAwesomeIcon icon={ faServer } className="mobileMenu__linkIcon" />
                     <span> Servicios </span>
-                </LinkS>
+                </Link>
                 <div className="mobileMenu__iconContainer" ref={ servicesLinkIcon }>
                     <FontAwesomeIcon 
                         icon={ faChevronRight } 
@@ -94,16 +93,16 @@ export const MobileMenu = () => {
                 </Link>
             </ul>
             <li className="mobileMenu__link">
-                <LinkS to="contact" smooth={ true } offset={ -90 }>
+                <Link to="/contact" className="link">
                     <FontAwesomeIcon icon={ faAddressBook } className="mobileMenu__linkIcon" />
                     <span> Contacto </span>
-                </LinkS>
+                </Link>
             </li>
             <li className="mobileMenu__link">
-                <LinkS to="blog" smooth={ true } offset={ -90 }>
+                <Link to="/blog" className="link" >
                     <FontAwesomeIcon icon={ faBlog } className="mobileMenu__linkIcon" />
                     <span> Blog </span>
-                </LinkS>
+                </Link>
             </li>
         </ul>
     )
