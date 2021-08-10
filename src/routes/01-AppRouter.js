@@ -28,6 +28,11 @@ export const AppRouter = () => {
                         component={ HomeScreen } 
                     />
                     <Route 
+                        exact 
+                        path="/vision5app" 
+                        component={ HomeScreen } 
+                    />
+                    <Route 
                         exact
                         path="/privacy-policies"
                         component={ BuildingScreen }
