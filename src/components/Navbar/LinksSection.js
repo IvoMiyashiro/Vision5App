@@ -9,10 +9,10 @@ export const LinksSection = () => {
         <div className="navbar__linksSection">
             <ul className="navbar__links">
                     <li className="navbar__link"> 
-                        <Link to="/" className="link"> Inicio </Link>
+                        <Link to="/" className="link navbar__link"> Inicio </Link>
                     </li>
                     <li className="navbar__link"> 
-                    <Link to="/about" className="link"> Nosotros </Link>
+                    <Link to="/about" className="link navbar__link"> Nosotros </Link>
                         <LinkMenu 
                             data={[{
                                 title: 'Boletín Informativo',
@@ -25,7 +25,7 @@ export const LinksSection = () => {
                     </li>
                 
                     <li className="navbar__link"> 
-                        <Link to="/services" className="link"> Servicios </Link>
+                        <Link to="/services" className="link navbar__link"> Servicios </Link>
                         <LinkMenu 
                             data={[{
                                 title: 'Productos',
@@ -40,12 +40,12 @@ export const LinksSection = () => {
                         />
                     </li>
                 
-                    <li className="navbar__link"> 
-                        <Link to="/contact" className="link"> Contacto </Link>
+                    <li className="navbar__link navbar__link"> 
+                        <Link to="/contact" className="link navbar__link"> Contacto </Link>
                     </li>
                 
-                    <li className="navbar__link"> 
-                        <Link to="/blog" className="link"> Blog </Link>
+                    <li className="navbar__link navbar__link"> 
+                        <Link to="/blog" className="link navbar__link"> Blog </Link>
                     </li>
             </ul>
         </div>
